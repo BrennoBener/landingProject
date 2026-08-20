@@ -1,5 +1,6 @@
+/* As variáveis abaixo são sobrescritas pelo script.js. 
+   Estão aqui apenas como garantia anti-falha. */
 :root {
-    /* Variáveis base - Serão substituídas pelo script.js */
     --cor-primaria: #bb1776; 
     --cor-secundaria: #94185f; 
     --cor-destaque: #c97a8f; 
@@ -7,27 +8,31 @@
     --cor-texto: #f1f0eb; 
 }
 
+/* RESET E FONTES: Se mudar a fonte no HTML, altere o nome 'Montserrat' aqui */
 * {
     margin: 0; padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
 
+/* ESTRUTURA BASE DO CARROSSEL DE TELA CHEIA */
 body, html {
     width: 100%; height: 100%;
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
-    overflow: hidden; 
+    overflow: hidden; /* Trava a rolagem vertical padrão */
 }
 
 .carousel {
     display: flex;
     width: 100vw; height: 100vh;
     overflow-x: auto; overflow-y: hidden;
-    scroll-snap-type: x mandatory; 
+    scroll-snap-type: x mandatory; /* Alinhamento magnético ao deslizar */
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch; 
 }
+
+/* Oculta as barras de rolagem nativas para visual de aplicativo */
 .carousel::-webkit-scrollbar { display: none; }
 .carousel { -ms-overflow-style: none; scrollbar-width: none; }
 
@@ -39,17 +44,21 @@ body, html {
     padding: 1rem; position: relative;
 }
 
+/* DESIGN DA CAPA */
 .cover-slide {
     background-size: cover; background-position: center;
     position: relative; z-index: 1;
     display: flex; align-items: center; justify-content: center;
 }
 
+/* Overlay Escuro da Capa: Garante que o texto seja legível independente da foto de fundo */
 .cover-slide::before {
     content: ''; position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(135deg, rgba(30, 8, 18, 0.9) 30%, rgba(187, 23, 118, 0.6) 100%);
+    /* Gradiente escuro que termina na cor principal */
+    background: linear-gradient(135deg, rgba(0,0,0, 0.8) 30%, var(--cor-primaria) 150%);
     z-index: -1;
+    opacity: 0.8;
 }
 
 .cover-content { text-align: center; }
@@ -66,6 +75,7 @@ body, html {
     color: var(--cor-destaque); margin-bottom: 3rem;
 }
 
+/* BOTÕES PADRÃO */
 .btn {
     background-color: var(--cor-primaria);
     color: var(--cor-texto); border: none;
@@ -73,13 +83,26 @@ body, html {
     font-weight: 600; text-transform: uppercase;
     border-radius: 4px; cursor: pointer;
     transition: background-color 0.3s ease;
+    text-decoration: none; display: inline-block;
 }
 
 .btn:active { background-color: var(--cor-secundaria); }
 
+/* BOTÃO DE WHATSAPP (Apenas no rodapé do produto) */
+.btn-whatsapp {
+    background-color: #25D366; /* Cor oficial do WhatsApp */
+    color: #ffffff;
+    padding: 0.8rem 1.2rem;
+    font-size: 0.85rem;
+    border-radius: 20px;
+    margin-left: auto; /* Empurra o botão para a direita */
+}
+.btn-whatsapp:active { background-color: #1ebe57; }
+
+/* DESIGN DO CARD DO PRODUTO */
 .product-card {
     width: 100%; max-width: 450px; 
-    background-color: rgba(255,255,255,0.05);
+    background-color: rgba(255,255,255,0.05); /* Fundo levemente translúcido */
     border-radius: 12px; overflow: hidden;
     box-shadow: 0 15px 35px rgba(0,0,0,0.6);
     display: flex; flex-direction: column;
@@ -87,7 +110,7 @@ body, html {
 }
 
 .product-image {
-    width: 100%; height: 55%; 
+    width: 100%; height: 50%; 
     background-size: cover; background-position: top center; 
     position: relative; cursor: pointer;
 }
@@ -102,6 +125,7 @@ body, html {
 .product-info {
     padding: 1.5rem; flex-grow: 1;
     display: flex; flex-direction: column;
+    overflow-y: auto; /* Permite rolar os textos se forem muito longos */
 }
 
 .info-header {
@@ -132,18 +156,20 @@ body, html {
     border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
+/* RODAPÉ DO PRODUTO (Preço e Botão) */
 .product-footer {
-    display: flex; flex-direction: column;
-    align-items: flex-start; margin-top: 1rem;
+    display: flex; justify-content: space-between;
+    align-items: center; margin-top: 1rem;
+    width: 100%;
 }
 
 .product-price {
-    font-size: 1.8rem; font-weight: 700;
-    color: var(--cor-primaria);
+    font-size: 1.6rem; font-weight: 700;
+    color: var(--cor-primaria); display: block;
 }
 
 .wholesale-tag {
-    font-size: 0.7rem; text-transform: uppercase;
+    font-size: 0.65rem; text-transform: uppercase;
     letter-spacing: 1px; color: var(--cor-destaque);
 }
 
@@ -153,6 +179,7 @@ body, html {
     animation: pulse 2s infinite;
 }
 
+/* GALERIA DE FOTOS (MODAL) */
 .modal {
     display: none; position: fixed;
     top: 0; left: 0; width: 100vw; height: 100vh;
@@ -162,7 +189,7 @@ body, html {
 
 .close-btn {
     position: absolute; top: 1rem; right: 1rem;
-    background: rgba(0,0,0,0.5); color: var(--cor-texto);
+    background: rgba(0,0,0,0.6); color: #fff;
     border: 1px solid var(--cor-primaria); padding: 0.5rem 1rem;
     border-radius: 20px; z-index: 101; font-size: 0.9rem; cursor: pointer;
 }
@@ -179,4 +206,5 @@ body, html {
     background-position: center;
 }
 
+/* ANIMAÇÕES */
 @keyframes pulse { 0% { opacity: 0.5; } 50% { opacity: 1; } 100% { opacity: 0.5; } }

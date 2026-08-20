@@ -4,18 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo Digital</title>
+    
+    <!-- FONTE DO SITE -->
+    <!-- Para mudar a fonte, acesse fonts.google.com, escolha uma fonte e substitua o link abaixo -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
+    <!-- O Javascript vai construir e injetar os slides (capa e produtos) aqui dentro -->
     <div class="carousel" id="mainCarousel"></div>
 
+    <!-- Modal (Tela sobreposta) da Galeria de Imagens -->
     <div id="galleryModal" class="modal">
         <button class="close-btn" onclick="fecharGaleria()">✕ Fechar</button>
         <div class="gallery-carousel" id="galleryContainer"></div>
     </div>
 
+    <!-- Importação dos scripts. A ordem importa: primeiro os dados, depois a lógica. -->
     <script src="config.js"></script>
     <script src="script.js"></script>
 </body>
