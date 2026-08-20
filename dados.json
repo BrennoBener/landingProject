@@ -1,0 +1,24 @@
+{
+  "nomeLoja": "PONTO IGUI",
+  "subtituloLoja": "Catálogo de Produtos",
+  "fotoCapa": "modelos/capaPontoIgui.png",
+  "tema": {
+    "primaria": "#bb1776",
+    "fundo": "#1e0812"
+  },
+  "produtos": [
+    {
+      "nome": "Conjunto Alfaiataria",
+      "ref": "PI-042",
+      "desc": "Conjunto blaser e calça com corte reto. Alta saída, ideal para compor vitrines.",
+      "preco": "R$ 119,90",
+      "especificacoes": "Tamanhos: P, M, G | Cores: Fúcsia, Preto",
+      "fotoPrincipal": "modelos/capaPontoIgui.png",
+      "galeria": [
+        { "foto": "modelos/capaPontoIgui.png" },
+        { "foto": "modelos/conjunto-costas.jpg" }
+      ],
+      "whatsapp": "5585999999999"
+    }
+  ]
+}

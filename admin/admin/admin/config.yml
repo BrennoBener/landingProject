@@ -1,0 +1,42 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "modelos" # Onde o painel salva as fotos que o cliente envia
+public_folder: "modelos" # O caminho que o código usa para ler as fotos
+
+collections:
+  - name: "configuracoes"
+    label: "Controle do Catálogo"
+    editor:
+      preview: false
+    files:
+      - label: "Dados e Produtos"
+        name: "dados"
+        file: "dados.json" # O arquivo que será gerado e atualizado pelo CMS
+        fields:
+          - {label: "Nome da Loja", name: "nomeLoja", widget: "string"}
+          - {label: "Subtítulo", name: "subtituloLoja", widget: "string"}
+          - {label: "Foto da Capa", name: "fotoCapa", widget: "image"}
+          
+          # Cores (O cliente pode escolher em uma paleta)
+          - label: "Tema"
+            name: "tema"
+            widget: "object"
+            fields:
+              - {label: "Cor Primária", name: "primaria", widget: "color", default: "#bb1776"}
+              - {label: "Cor de Fundo", name: "fundo", widget: "color", default: "#1e0812"}
+          
+          # Lista de Produtos
+          - label: "Produtos"
+            name: "produtos"
+            widget: "list"
+            fields:
+              - {label: "Nome do Produto", name: "nome", widget: "string"}
+              - {label: "Referência (REF)", name: "ref", widget: "string"}
+              - {label: "Descrição", name: "desc", widget: "text"}
+              - {label: "Preço", name: "preco", widget: "string"}
+              - {label: "Especificações", name: "especificacoes", widget: "string"}
+              - {label: "WhatsApp para Venda", name: "whatsapp", widget: "string", required: false}
+              - {label: "Foto Principal", name: "fotoPrincipal", widget: "image"}
+              - {label: "Galeria de Fotos", name: "galeria", widget: "list", field: {label: "Foto", name: "foto", widget: "image"}}
