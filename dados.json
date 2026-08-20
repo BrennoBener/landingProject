@@ -15,10 +15,23 @@
       "especificacoes": "Tamanhos: P, M, G | Cores: Fúcsia, Preto",
       "fotoPrincipal": "modelos/capaPontoIgui.png",
       "galeria": [
-        { "foto": "modelos/capaPontoIgui.png" },
-        { "foto": "modelos/conjunto-costas.jpg" }
+        {
+          "foto": "modelos/capaPontoIgui.png"
+        },
+        {
+          "foto": "modelos/conjunto-costas.jpg"
+        }
       ],
       "whatsapp": "5585999999999"
+    },
+    {
+      "nome": "muito doido",
+      "ref": "doidera",
+      "desc": "aoidasmadakkmd",
+      "preco": "3923492349",
+      "especificacoes": "aosnsflkn",
+      "whatsapp": "151651656105",
+      "fotoPrincipal": "modelos/whatsapp-image-2026-07-27-at-13.06.29.jpeg"
     }
   ]
 }
