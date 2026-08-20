@@ -16,7 +16,29 @@
         <button class="close-btn" onclick="fecharGaleria()">✕ Fechar</button>
         <div class="gallery-carousel" id="galleryContainer"></div>
     </div>
+    
+    <!-- Botão Flutuante do Carrinho -->
+    <div class="cart-floating-btn" onclick="abrirCarrinho()">
+        🛒 Carrinho (<span id="cart-count">0</span>)
+    </div>
 
+    <!-- Modal do Carrinho -->
+    <div id="cartModal" class="modal">
+        <div class="cart-container">
+            <div class="cart-header">
+                <h2>Seu Pedido</h2>
+                <button class="close-btn-cart" onclick="fecharCarrinho()">✕ Fechar</button>
+            </div>
+            <div id="cartItems" class="cart-items">
+                <!-- Itens injetados via JS -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">Total: <span id="cartTotal">R$ 0,00</span></div>
+                <button class="btn btn-whatsapp cart-checkout-btn" onclick="finalizarPedido()">Finalizar Pedido ➔</button>
+            </div>
+        </div>
+    </div>
+    
     <!-- A ORDEM IMPORTA: Primeiro os dados, depois a lógica que lê os dados -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script src="script.js"></script>
