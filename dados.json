@@ -3,10 +3,19 @@
   "subtituloLoja": "Catálogo de Produtos",
   "fotoCapa": "modelos/capaPontoIgui.png",
   "tema": {
-    "primaria": "#bb1776",
-    "fundo": "#1e0812"
+    "primaria": "#e5d209",
+    "fundo": "#2f17cc"
   },
   "produtos": [
+    {
+      "nome": "muito doido",
+      "ref": "doidera",
+      "desc": "aoidasmadakkmd",
+      "preco": "3923492349",
+      "especificacoes": "aosnsflkn",
+      "whatsapp": "151651656105",
+      "fotoPrincipal": "modelos/whatsapp-image-2026-07-27-at-13.06.29.jpeg"
+    },
     {
       "nome": "Conjunto Alfaiataria",
       "ref": "PI-042",
@@ -23,15 +32,6 @@
         }
       ],
       "whatsapp": "5585999999999"
-    },
-    {
-      "nome": "muito doido",
-      "ref": "doidera",
-      "desc": "aoidasmadakkmd",
-      "preco": "3923492349",
-      "especificacoes": "aosnsflkn",
-      "whatsapp": "151651656105",
-      "fotoPrincipal": "modelos/whatsapp-image-2026-07-27-at-13.06.29.jpeg"
     }
   ]
 }
