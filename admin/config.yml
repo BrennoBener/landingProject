@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "modelos" # Onde o painel salva as fotos que o cliente envia
-public_folder: "modelos" # O caminho que o código usa para ler as fotos
+media_folder: "modelos"
+public_folder: "modelos"
 
 collections:
   - name: "configuracoes"
@@ -13,13 +13,12 @@ collections:
     files:
       - label: "Dados e Produtos"
         name: "dados"
-        file: "dados.json" # O arquivo que será gerado e atualizado pelo CMS
+        file: "dados.json"
         fields:
           - {label: "Nome da Loja", name: "nomeLoja", widget: "string"}
           - {label: "Subtítulo", name: "subtituloLoja", widget: "string"}
           - {label: "Foto da Capa", name: "fotoCapa", widget: "image"}
           
-          # Cores (O cliente pode escolher em uma paleta)
           - label: "Tema"
             name: "tema"
             widget: "object"
@@ -27,7 +26,6 @@ collections:
               - {label: "Cor Primária", name: "primaria", widget: "color", default: "#bb1776"}
               - {label: "Cor de Fundo", name: "fundo", widget: "color", default: "#1e0812"}
           
-          # Lista de Produtos
           - label: "Produtos"
             name: "produtos"
             widget: "list"
