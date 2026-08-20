@@ -3,8 +3,8 @@
   "subtituloLoja": "Catálogo de Produtos",
   "fotoCapa": "modelos/capaPontoIgui.png",
   "tema": {
-    "primaria": "#bb1776",
-    "fundo": "#1e0812"
+    "primaria": "#910f5c",
+    "fundo": "#381624"
   },
   "produtos": [
     {
@@ -15,8 +15,12 @@
       "especificacoes": "Tamanhos: P, M, G | Cores: Fúcsia, Preto",
       "fotoPrincipal": "modelos/capaPontoIgui.png",
       "galeria": [
-        { "foto": "modelos/capaPontoIgui.png" },
-        { "foto": "modelos/conjunto-costas.jpg" }
+        {
+          "foto": "modelos/capaPontoIgui.png"
+        },
+        {
+          "foto": "modelos/conjunto-costas.jpg"
+        }
       ],
       "whatsapp": "5585999999999"
     }
