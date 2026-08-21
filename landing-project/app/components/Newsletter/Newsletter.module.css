@@ -1,0 +1,108 @@
+.newsletter {
+  align-items: center;
+  background: var(--berry-deep);
+  color: var(--paper);
+  display: grid;
+  gap: clamp(2rem, 7vw, 7rem);
+  grid-template-columns: 1fr 1fr;
+  padding: clamp(3.5rem, 7vw, 6rem) clamp(1.5rem, 10vw, 10rem);
+}
+
+.label {
+  color: var(--blush);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+}
+
+.introduction h2 {
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  font-weight: 400;
+  letter-spacing: -.03em;
+  line-height: 1;
+  margin: 0;
+  max-width: 32rem;
+}
+
+.form {
+  display: grid;
+  gap: .6rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.form label {
+  color: var(--blush);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.form input {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--rose);
+  border-radius: 0;
+  color: var(--paper);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1rem;
+  outline: 0;
+  padding: .7rem 0;
+  width: 100%;
+}
+
+.form input::placeholder {
+  color: var(--rose);
+}
+
+.form input:focus {
+  border-bottom-color: var(--paper);
+}
+
+.form button {
+  align-items: center;
+  background: var(--berry);
+  border: 0;
+  color: var(--paper);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .68rem;
+  font-weight: 700;
+  gap: .8rem;
+  grid-column: 1 / -1;
+  justify-content: center;
+  letter-spacing: .12em;
+  margin-top: 1rem;
+  padding: 1rem 1.3rem;
+  text-transform: uppercase;
+  transition: background .2s ease;
+}
+
+.form button:hover {
+  background: var(--rose);
+}
+
+.form button span {
+  font-size: 1rem;
+}
+
+@media (max-width: 700px) {
+  .newsletter {
+    align-items: start;
+    grid-template-columns: 1fr;
+  }
+
+  .form {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .form button {
+    grid-column: auto;
+  }
+}

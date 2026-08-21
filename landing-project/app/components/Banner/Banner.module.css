@@ -1,0 +1,129 @@
+.hero {
+  align-items: flex-end;
+  display: flex;
+  min-height: min(780px, 88vh);
+  overflow: hidden;
+  padding: clamp(7rem, 16vh, 10rem) clamp(1.5rem, 10vw, 10rem) clamp(3rem, 8vh, 6rem);
+  position: relative;
+}
+
+.heroImage,
+.heroWash {
+  inset: 0;
+  position: absolute;
+}
+
+.heroImage {
+  background-image: url("/modelos/PontoGuiModaBanner.png");
+  background-position: center;
+  background-size: cover;
+  transform: scale(1.01);
+  @media (max-width: 426px) {
+    background-image: url("/modelos/capaPontoIgui.png");
+  }
+}
+
+.heroWash {
+  background: linear-gradient(90deg, rgba(255, 250, 244, .92) 0%, rgba(255, 250, 244, .48) 38%, rgba(255, 250, 244, 0) 68%);
+}
+
+.heroContent {
+  max-width: 31rem;
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow {
+  color: var(--berry-deep);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  margin: 0 0 1.3rem;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  color: var(--ink);
+  font-size: clamp(3.25rem, 7vw, 6.7rem);
+  font-weight: 400;
+  letter-spacing: -.04em;
+  line-height: .91;
+  margin: 0;
+}
+
+.heroCopy {
+  color: #512d31;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  margin: 1.8rem 0 2rem;
+  max-width: 24rem;
+}
+
+.primaryButton {
+  align-items: center;
+  background: var(--berry);
+  color: white;
+  display: inline-flex;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .72rem;
+  font-weight: 700;
+  gap: 1.5rem;
+  letter-spacing: .12em;
+  padding: 1rem 1.3rem;
+  text-transform: uppercase;
+  transition: background .2s ease, transform .2s ease;
+}
+
+.primaryButton:hover {
+  background: var(--berry-deep);
+  transform: translateY(-2px);
+}
+
+.primaryButton span {
+  font-size: 1.1rem;
+  line-height: 0;
+}
+
+.heroNote {
+  bottom: 2.5rem;
+  color: var(--berry-deep);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .65rem;
+  letter-spacing: .14em;
+  position: absolute;
+  right: clamp(1.5rem, 5vw, 5rem);
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  z-index: 1;
+}
+
+.heroNote span {
+  color: var(--berry);
+  margin-top: .5rem;
+}
+
+@media (max-width: 700px) {
+  .hero {
+    align-items: flex-end;
+    min-height: 720px;
+    padding-bottom: 4rem;
+  }
+
+  .heroImage {
+    background-position: 64% center;
+  }
+
+  .heroWash {
+    background: linear-gradient(180deg, rgba(255, 250, 244, .08) 24%, rgba(255, 250, 244, .86) 68%, rgba(255, 250, 244, .98) 100%);
+  }
+
+  .hero h1 {
+    font-size: clamp(3.2rem, 15vw, 5rem);
+  }
+
+  .heroNote {
+    bottom: 1.4rem;
+    right: 1.5rem;
+  }
+}
