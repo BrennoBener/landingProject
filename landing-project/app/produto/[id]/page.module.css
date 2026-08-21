@@ -1,0 +1,62 @@
+.page {
+  background: var(--background);
+  min-height: 100vh;
+}
+
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem clamp(1.5rem, 7vw, 7rem);
+}
+
+.wordmark {
+  color: var(--berry-deep);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+}
+
+.wordmark span {
+  color: var(--berry);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.35rem;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: lowercase;
+}
+
+.backLink {
+  border-bottom: 1px solid var(--berry);
+  color: var(--berry-deep);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  padding-bottom: .35rem;
+  text-transform: uppercase;
+}
+
+.backLink span {
+  font-size: .9rem;
+  margin-left: .4rem;
+}
+
+.product {
+  margin: 0 auto;
+  max-width: 90rem;
+  padding: clamp(4rem, 9vw, 8rem) clamp(1.5rem, 7vw, 7rem) clamp(5rem, 10vw, 9rem);
+}
+
+@media (max-width: 700px) {
+  .header {
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .backLink {
+    font-size: .58rem;
+  }
+}

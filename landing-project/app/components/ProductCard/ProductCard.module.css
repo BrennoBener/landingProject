@@ -1,0 +1,249 @@
+.card {
+  min-width: 0;
+}
+
+.imageWrapper {
+  aspect-ratio: 3 / 4;
+  background: var(--blush);
+  overflow: hidden;
+  position: relative;
+}
+
+.imageWrapper a {
+  display: block;
+  height: 100%;
+}
+
+.imageWrapper img {
+  display: block;
+  height: 100%;
+  object-fit: contain;
+  transition: transform .4s ease;
+  width: 100%;
+}
+
+.imageLink {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.fullSizeImage {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.imageWrapper.fullSizeWrapper {
+  aspect-ratio: auto;
+  height: auto;
+}
+
+.imageWrapper .fullSizeImage {
+  height: auto;
+  object-fit: initial;
+}
+
+.card:hover .imageWrapper img {
+  transform: scale(1.04);
+}
+
+.carouselControls {
+  align-items: center;
+  background: rgb(116 20 65 / 85%);
+  bottom: .8rem;
+  color: var(--paper);
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .65rem;
+  gap: .7rem;
+  left: 50%;
+  padding: .35rem .55rem;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.carouselControls button {
+  background: transparent;
+  border: 0;
+  color: var(--paper);
+  cursor: pointer;
+  font-size: .9rem;
+  line-height: 1;
+  padding: 0;
+}
+
+.details {
+  align-items: end;
+  display: grid;
+  gap: .35rem;
+  grid-template-columns: 1fr auto;
+  padding-top: 1rem;
+}
+
+
+
+.details p {
+  color: var(--berry);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .62rem;
+  font-weight: 700;
+  grid-column: 1 / -1;
+  letter-spacing: .14em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.details h3 {
+  color: var(--ink);
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.details span {
+  color: var(--berry-deep);
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.description {
+  color: var(--ink);
+  font-size: .95rem;
+  grid-column: 1 / -1;
+  line-height: 1.5;
+  margin: .35rem 0 0;
+  max-width: 32rem;
+}
+
+.reference {
+  color: var(--rose) !important;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .62rem !important;
+  grid-column: 1;
+  letter-spacing: .08em;
+  margin-top: .35rem;
+}
+
+.purchase {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  grid-column: 1 / -1;
+  justify-content: space-between;
+  margin-top: .8rem;
+}
+
+.purchase strong {
+  color: var(--berry-deep);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.35rem;
+}
+
+.purchase button {
+  background: var(--berry);
+  border: 0;
+  color: var(--paper);
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  border-radius: 4px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  padding: .7rem .85rem;
+  width: 100%;
+  text-transform: uppercase;
+  transition: background .2s ease;
+}
+
+.purchase button:hover {
+  background: var(--berry-deep);
+}
+
+
+.purchase button span {
+  color: inherit;
+  font-size: .9rem;
+  margin-left: .35rem;
+}
+
+.collectionLink {
+  border-bottom: 1px solid var(--berry);
+  color: var(--berry-deep);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .68rem;
+  font-weight: 700;
+  grid-column: 1 / -1;
+  letter-spacing: .1em;
+  justify-self: start;
+  padding-bottom: .35rem;
+  text-transform: uppercase;
+}
+
+.collectionLink span {
+  font-size: .95rem;
+  margin-left: .4rem;
+}
+
+.detailed {
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 4rem);
+  grid-template-columns: minmax(0, 1.2fr) minmax(15rem, .8fr);
+}
+
+.detailed .imageWrapper {
+  aspect-ratio: 16 / 10;
+}
+
+.detailed .details {
+  align-content: center;
+  padding: 0;
+}
+
+.detailed .details h3 {
+  font-size: clamp(1.7rem, 3vw, 3rem);
+  max-width: 22rem;
+}
+
+@media (max-width: 700px) {
+  .imageWrapper {
+    aspect-ratio: 4 / 3;
+  }
+
+  .detailed {
+    display: block;
+  }
+
+  .detailed .details {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding-top: 1rem;
+  }
+
+  .detailed .titleLink,
+  .detailed .details h3,
+  .detailed .description {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .detailed .purchase {
+    display: block;
+    width: 100%;
+  }
+
+  .detailed .purchase button {
+    margin-top: .75rem;
+  }
+
+  .detailed .imageWrapper {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+.titleLink {
+  color: inherit;
+  text-decoration: none;
+}

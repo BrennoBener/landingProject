@@ -1,0 +1,98 @@
+.page {
+  background: var(--background);
+  color: var(--ink);
+  min-height: 100vh;
+}
+
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem clamp(1.5rem, 7vw, 7rem);
+}
+
+.wordmark {
+  color: var(--berry-deep);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+}
+
+.wordmark span {
+  color: var(--berry);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.35rem;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: lowercase;
+}
+
+.backLink {
+  border-bottom: 1px solid var(--berry);
+  color: var(--berry-deep);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  padding-bottom: .35rem;
+  text-transform: uppercase;
+}
+
+.backLink span {
+  font-size: .9rem;
+  margin-left: .4rem;
+}
+
+.introduction {
+  margin: 0 auto;
+  max-width: 90rem;
+  padding: clamp(5rem, 11vw, 10rem) clamp(1.5rem, 7vw, 7rem) clamp(4rem, 8vw, 7rem);
+}
+
+.label {
+  color: var(--berry);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  margin: 0 0 1.5rem;
+  text-transform: uppercase;
+}
+
+.introduction h1 {
+  font-size: clamp(3.2rem, 8vw, 8rem);
+  font-weight: 400;
+  letter-spacing: -.05em;
+  line-height: .9;
+  margin: 0;
+}
+
+.introCopy {
+  color: #512d31;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  margin: 2rem 0 0;
+  max-width: 26rem;
+}
+
+.collection {
+  display: grid;
+  gap: clamp(2.5rem, 6vw, 6rem);
+  margin: 0 auto;
+  max-width: 90rem;
+  padding: 0 clamp(1.5rem, 7vw, 7rem) clamp(5rem, 10vw, 9rem);
+}
+
+@media (max-width: 768px) {
+  .header {
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .backLink {
+    font-size: .58rem;
+  }
+
+}
